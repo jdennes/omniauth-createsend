@@ -1,4 +1,4 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'omniauth-createsend', :path => '../'
+gem 'omniauth-createsend'
