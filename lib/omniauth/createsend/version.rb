@@ -1,5 +1,5 @@
 module OmniAuth
   module CreateSend
-    VERSION = "0.0.1"
+    VERSION = "0.0.2"
   end
 end
