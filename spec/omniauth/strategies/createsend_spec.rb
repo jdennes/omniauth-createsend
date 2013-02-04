@@ -25,8 +25,4 @@ describe OmniAuth::Strategies::CreateSend do
       subject.callback_path.should eq('/auth/createsend/callback')
     end
   end
-
-  describe '#authorize_params' do
-    # TODO: Add tests for #authorize_params
-  end
 end

@@ -1,6 +1,6 @@
 # OmniAuth CreateSend
 
-This is the official OmniAuth strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). The first thing you need to do is register an OAuth2 Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
+This is the official OmniAuth strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
 
 ## Installing
 
@@ -16,6 +16,6 @@ Then `bundle install`.
 
 ```ruby
 use OmniAuth::Builder do
-  provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET']
+  provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'], :scope => 'ViewReports,CreateCampaigns,SendCampaigns'
 end
 ```
