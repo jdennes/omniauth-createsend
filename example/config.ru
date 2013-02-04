@@ -21,7 +21,7 @@ end
 use Rack::Session::Cookie
 
 use OmniAuth::Builder do
-  provider :createsend, ENV['APP_ID'], ENV['APP_SECRET'],
+  provider :createsend, ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'],
     :scope => 'ViewReports,ManageLists,CreateCampaigns,ImportSubscribers,SendCampaigns,ViewSubscribersInReports,ManageTemplates'
 end
 

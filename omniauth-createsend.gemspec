@@ -3,12 +3,13 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'omniauth/createsend/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'omniauth-createsend'
-  s.version  = OmniAuth::CreateSend::VERSION
-  s.platform = Gem::Platform::RUBY
-  s.author   = 'James Dennes'
-  s.email    = ['jdennes@gmail.com']
-  s.summary  = 'CreateSend strategy for OmniAuth'
+  s.name          = 'omniauth-createsend'
+  s.version       = OmniAuth::CreateSend::VERSION
+  s.platform      = Gem::Platform::RUBY
+  s.author        = 'James Dennes'
+  s.email         = ['jdennes@gmail.com']
+  s.summary       = 'Official OmniAuth strategy for the Campaign Monitor API.'
+  s.description   = 'The official OmniAuth strategy for authenticating with the Campaign Monitor API.'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -17,6 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'omniauth-oauth2', '~> 1.1'
 
-  s.add_development_dependency 'rspec', '~> 2.7'
+  s.add_development_dependency 'rspec', '~> 2.12'
   s.add_development_dependency 'rake'
 end

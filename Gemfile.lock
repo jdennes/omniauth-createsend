@@ -51,4 +51,4 @@ DEPENDENCIES
   omniauth-createsend!
   omniauth-oauth2!
   rake
-  rspec (~> 2.7)
+  rspec (~> 2.12)

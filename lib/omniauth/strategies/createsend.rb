@@ -13,7 +13,7 @@ module OmniAuth
       def request_phase
         super
       end
-      
+
       def authorize_params
         super.tap do |params|
           %w[scope client_options].each do |v|
