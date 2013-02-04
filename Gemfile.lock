@@ -1,0 +1,54 @@
+GIT
+  remote: git://github.com/intridea/omniauth-oauth2.git
+  revision: 032c21f2585047b8a7bb335f4f64697f0e6247ab
+  specs:
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
+
+PATH
+  remote: .
+  specs:
+    omniauth-createsend (0.0.1)
+      omniauth-oauth2 (~> 1.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    diff-lcs (1.1.3)
+    faraday (0.8.5)
+      multipart-post (~> 1.1)
+    hashie (1.2.0)
+    httpauth (0.2.0)
+    jwt (0.1.5)
+      multi_json (>= 1.0)
+    multi_json (1.5.0)
+    multipart-post (1.1.5)
+    oauth2 (0.8.0)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    rack (1.5.1)
+    rake (10.0.3)
+    rspec (2.12.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rspec-core (2.12.2)
+    rspec-expectations (2.12.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.12.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  omniauth-createsend!
+  omniauth-oauth2!
+  rake
+  rspec (~> 2.7)
