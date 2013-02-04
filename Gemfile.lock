@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-createsend (0.0.1)
+    omniauth-createsend (0.0.2)
       omniauth-oauth2 (~> 1.1)
 
 GEM
