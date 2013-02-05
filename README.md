@@ -20,7 +20,9 @@ use OmniAuth::Builder do
 end
 ```
 
-This gem also includes an [example](https://github.com/campaignmonitor/omniauth-createsend/tree/master/example) Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.
+This gem also includes an [example](https://github.com/campaignmonitor/omniauth-createsend/blob/master/example/config.ru) Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.
+
+Once you've authenticated, you should use the [createsend](http://campaignmonitor.github.com/createsend-ruby/) gem to access Campaign Monitor resources.
 
 ## Contributing
 1. Fork the repository
