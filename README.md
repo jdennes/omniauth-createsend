@@ -9,18 +9,26 @@ This is the official [OmniAuth](http://www.omniauth.org/) strategy for authentic
 
 ## Installing
 
-Add a dependency in your `Gemfile`:
+Add a dependency to your `Gemfile` then `bundle install`.
 
 ```ruby
 gem 'omniauth-createsend'
 ```
 
-Then `bundle install`.
-
 ## Basic Usage
+
+In Rack applications:
 
 ```ruby
 use OmniAuth::Builder do
+  provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'], :scope => 'ViewReports,CreateCampaigns,SendCampaigns'
+end
+```
+
+In Rails applications:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
   provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'], :scope => 'ViewReports,CreateCampaigns,SendCampaigns'
 end
 ```

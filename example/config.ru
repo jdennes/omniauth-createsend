@@ -9,7 +9,7 @@ class App < Sinatra::Base
 
   get '/auth/createsend/callback' do
     response = "Your user is successfully authenticated. Here are you details you need:<br/><br/>"
-    response << "token: #{request.env['omniauth.auth']['credentials']['token']}<br/>"
+    response << "access token: #{request.env['omniauth.auth']['credentials']['token']}<br/>"
     response << "refresh token: #{request.env['omniauth.auth']['credentials']['refresh_token']}<br/>"
     response << "expires at: #{request.env['omniauth.auth']['credentials']['expires_at']}<br/>"
     response
