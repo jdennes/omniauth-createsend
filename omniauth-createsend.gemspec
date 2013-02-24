@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email         = ['jdennes@gmail.com']
   s.summary       = 'Official OmniAuth strategy for the Campaign Monitor API.'
   s.description   = 'The official OmniAuth strategy for authenticating with the Campaign Monitor API.'
-  s.homepage      = 'https://github.com/campaignmonitor/omniauth-createsend/'
+  s.homepage      = 'https://github.com/jdennes/omniauth-createsend/'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

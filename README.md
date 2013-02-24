@@ -1,10 +1,10 @@
 # OmniAuth CreateSend
-[![Build Status](https://secure.travis-ci.org/campaignmonitor/omniauth-createsend.png)][travis] [![Dependency Status](https://gemnasium.com/campaignmonitor/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
+[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
 
 This is the official [OmniAuth](http://www.omniauth.org/) strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
 
-[travis]: http://travis-ci.org/campaignmonitor/omniauth-createsend
-[gemnasium]: https://gemnasium.com/campaignmonitor/omniauth-createsend
+[travis]: http://travis-ci.org/jdennes/omniauth-createsend
+[gemnasium]: https://gemnasium.com/jdennes/omniauth-createsend
 [gembadge]: http://badge.fury.io/rb/omniauth-createsend
 
 ## Installing
@@ -33,7 +33,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-This gem also includes an [example](https://github.com/campaignmonitor/omniauth-createsend/blob/master/example/config.ru) Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.
+This gem also includes an [example](https://github.com/jdennes/omniauth-createsend/blob/master/example/config.ru) Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.
 
 Once you've authenticated, you should use the [createsend](http://campaignmonitor.github.com/createsend-ruby/) gem to access Campaign Monitor resources.
 
