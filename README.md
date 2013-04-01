@@ -1,9 +1,10 @@
 # OmniAuth CreateSend
-[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
+[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Coverage Status](https://coveralls.io/repos/jdennes/omniauth-createsend/badge.png?branch=master)][coveralls] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
 
 This is the official [OmniAuth](http://www.omniauth.org/) strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
 
 [travis]: http://travis-ci.org/jdennes/omniauth-createsend
+[coveralls]: https://coveralls.io/r/jdennes/omniauth-createsend
 [gemnasium]: https://gemnasium.com/jdennes/omniauth-createsend
 [gembadge]: http://badge.fury.io/rb/omniauth-createsend
 
@@ -39,7 +40,7 @@ Once you've authenticated, you should use the [createsend](http://campaignmonito
 
 ## Contributing
 1. Fork the repository
-2. Make your changes, including tests for your changes.
+2. Make your changes, including tests for your changes which maintain [coverage][coveralls].
 3. Ensure that the build passes, by running `bundle exec rake` (CI runs on: `2.0.0`, `1.9.3`, `1.9.2`, `1.8.7`, and `ree`)
 4. It should go without saying, but do not increment the version number in your commits.
 5. Submit a pull request.
