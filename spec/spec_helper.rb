@@ -11,7 +11,13 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 SimpleCov.start
 
 require 'rspec'
+require 'rack/test'
+require 'webmock/rspec'
+require 'omniauth'
 require 'omniauth-createsend'
 
 RSpec.configure do |config|
+  config.include WebMock::API
+  config.include Rack::Test::Methods
+  config.extend  OmniAuth::Test::StrategyMacros, :type => :strategy
 end
