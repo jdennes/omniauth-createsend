@@ -39,8 +39,5 @@ This gem also includes an [example](https://github.com/jdennes/omniauth-createse
 Once you've authenticated, you should use the [createsend](http://campaignmonitor.github.com/createsend-ruby/) gem to access Campaign Monitor resources.
 
 ## Contributing
-1. Fork the repository
-2. Make your changes, including tests for your changes which maintain [coverage][coveralls].
-3. Ensure that the build passes, by running `bundle exec rake` (CI runs on: `2.0.0`, `1.9.3`, `1.9.2`, `1.8.7`, and `ree`)
-4. It should go without saying, but do not increment the version number in your commits.
-5. Submit a pull request.
+
+Please check the [guidelines for contributing](https://github.com/jdennes/omniauth-createsend/blob/master/CONTRIBUTING.md) to this repository.
