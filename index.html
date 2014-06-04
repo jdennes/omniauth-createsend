@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>OmniAuth CreateSend by campaignmonitor</title>
+    <title>OmniAuth CreateSend by jdennes</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -18,54 +18,57 @@
         <h1>OmniAuth CreateSend</h1>
         <p>The official OmniAuth strategy for authenticating with the Campaign Monitor API.</p>
 
-        <p class="view"><a href="https://github.com/campaignmonitor/omniauth-createsend">View the Project on GitHub <small>campaignmonitor/omniauth-createsend</small></a></p>
+        <p class="view"><a href="https://github.com/jdennes/omniauth-createsend">View the Project on GitHub <small>jdennes/omniauth-createsend</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/campaignmonitor/omniauth-createsend/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/campaignmonitor/omniauth-createsend/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/campaignmonitor/omniauth-createsend">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/jdennes/omniauth-createsend/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jdennes/omniauth-createsend/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jdennes/omniauth-createsend">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h1>OmniAuth CreateSend</h1>
-
-<p><a href="http://travis-ci.org/campaignmonitor/omniauth-createsend"><img src="https://secure.travis-ci.org/campaignmonitor/omniauth-createsend.png" alt="Build Status"></a> <a href="https://gemnasium.com/campaignmonitor/omniauth-createsend"><img src="https://gemnasium.com/campaignmonitor/omniauth-createsend.png" alt="Dependency Status"></a> <a href="http://badge.fury.io/rb/omniauth-createsend"><img src="https://badge.fury.io/rb/omniauth-createsend.png" alt="Gem Version"></a></p>
+        <h1>
+<a name="omniauth-createsend" class="anchor" href="#omniauth-createsend"><span class="octicon octicon-link"></span></a>OmniAuth CreateSend</h1>
 
 <p>This is the official <a href="http://www.omniauth.org/">OmniAuth</a> strategy for authenticating with the <a href="http://www.campaignmonitor.com/api/">Campaign Monitor API</a>. You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.</p>
 
-<h2>Installing</h2>
+<h2>
+<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing</h2>
 
-<p>Add a dependency in your <code>Gemfile</code>:</p>
+<p>Add a dependency to your <code>Gemfile</code> then <code>bundle install</code>.</p>
 
-<div class="highlight"><pre><span class="n">gem</span> <span class="s1">'omniauth-createsend'</span>
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s1">'omniauth-createsend'</span>
 </pre></div>
 
-<p>Then <code>bundle install</code>.</p>
+<h2>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic Usage</h2>
 
-<h2>Basic Usage</h2>
+<p>In Rack applications:</p>
 
-<div class="highlight"><pre><span class="n">use</span> <span class="no">OmniAuth</span><span class="o">::</span><span class="no">Builder</span> <span class="k">do</span>
+<div class="highlight highlight-ruby"><pre><span class="n">use</span> <span class="no">OmniAuth</span><span class="o">::</span><span class="no">Builder</span> <span class="k">do</span>
   <span class="n">provider</span> <span class="s2">"createsend"</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'CREATESEND_CLIENT_ID'</span><span class="o">]</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'CREATESEND_CLIENT_SECRET'</span><span class="o">]</span><span class="p">,</span> <span class="ss">:scope</span> <span class="o">=&gt;</span> <span class="s1">'ViewReports,CreateCampaigns,SendCampaigns'</span>
 <span class="k">end</span>
 </pre></div>
 
-<p>This gem also includes an <a href="https://github.com/campaignmonitor/omniauth-createsend/blob/master/example/config.ru">example</a> Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.</p>
+<p>In Rails applications:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span> <span class="no">OmniAuth</span><span class="o">::</span><span class="no">Builder</span> <span class="k">do</span>
+  <span class="n">provider</span> <span class="s2">"createsend"</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'CREATESEND_CLIENT_ID'</span><span class="o">]</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'CREATESEND_CLIENT_SECRET'</span><span class="o">]</span><span class="p">,</span> <span class="ss">:scope</span> <span class="o">=&gt;</span> <span class="s1">'ViewReports,CreateCampaigns,SendCampaigns'</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>This gem also includes an <a href="https://github.com/jdennes/omniauth-createsend/blob/master/example/config.ru">example</a> Rack application which demonstrates how to authenticate with the Campaign Monitor API using this OmniAuth strategy.</p>
 
 <p>Once you've authenticated, you should use the <a href="http://campaignmonitor.github.com/createsend-ruby/">createsend</a> gem to access Campaign Monitor resources.</p>
 
-<h2>Contributing</h2>
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
-<ol>
-<li>Fork the repository</li>
-<li>Make your changes, including tests for your changes.</li>
-<li>Ensure that the build passes, by running <code>bundle exec rake</code> (CI runs on: <code>1.9.3</code>, <code>1.9.2</code>, <code>1.8.7</code> and <code>ree</code>)</li>
-<li>It should go without saying, but do not increment the version number in your commits.</li>
-<li>Submit a pull request.</li>
-</ol>
+<p>Please check the <a href="https://github.com/jdennes/omniauth-createsend/blob/master/CONTRIBUTING.md">guidelines for contributing</a> to this repository.</p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/campaignmonitor">campaignmonitor</a></p>
+        <p>This project is maintained by <a href="https://github.com/jdennes">jdennes</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
