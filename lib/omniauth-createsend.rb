@@ -1,1 +1,1 @@
-require 'omniauth/createsend'
+require "omniauth/createsend"

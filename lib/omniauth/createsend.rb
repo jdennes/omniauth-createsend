@@ -1,2 +1,2 @@
-require 'omniauth/createsend/version'
-require 'omniauth/strategies/createsend'
+require "omniauth/createsend/version"
+require "omniauth/strategies/createsend"

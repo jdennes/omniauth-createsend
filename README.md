@@ -13,7 +13,7 @@ This is the official [OmniAuth](http://www.omniauth.org/) strategy for authentic
 Add a dependency to your `Gemfile` then `bundle install`.
 
 ```ruby
-gem 'omniauth-createsend'
+gem "omniauth-createsend"
 ```
 
 ## Basic Usage
@@ -22,7 +22,7 @@ In Rack applications:
 
 ```ruby
 use OmniAuth::Builder do
-  provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'], :scope => 'ViewReports,CreateCampaigns,SendCampaigns'
+  provider "createsend", ENV["CREATESEND_CLIENT_ID"], ENV["CREATESEND_CLIENT_SECRET"], :scope => "ViewReports,CreateCampaigns,SendCampaigns"
 end
 ```
 
@@ -30,7 +30,7 @@ In Rails applications:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider "createsend", ENV['CREATESEND_CLIENT_ID'], ENV['CREATESEND_CLIENT_SECRET'], :scope => 'ViewReports,CreateCampaigns,SendCampaigns'
+  provider "createsend", ENV["CREATESEND_CLIENT_ID"], ENV["CREATESEND_CLIENT_SECRET"], :scope => "ViewReports,CreateCampaigns,SendCampaigns"
 end
 ```
 

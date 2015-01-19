@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe OmniAuth::Strategies::CreateSend do
   def app; lambda{|env| [200, {}, ["Hello."]]} end
@@ -12,45 +12,45 @@ describe OmniAuth::Strategies::CreateSend do
     OmniAuth.config.test_mode = false
   end
 
-  describe '#client' do
+  describe "#client" do
     subject{ fresh_strategy }
 
-    it 'should have the correct createsend site' do
+    it "should have the correct createsend site" do
       instance = subject.new(app, {})
-      instance.client.site.should eq("https://api.createsend.com")
+      expect(instance.client.site).to eq "https://api.createsend.com"
     end
 
-    it 'should have the correct authorization url' do
+    it "should have the correct authorization url" do
       instance = subject.new(app, {})
-      instance.client.options[:authorize_url].should eq("/oauth")
+      expect(instance.client.options[:authorize_url]).to eq "/oauth"
     end
 
-    it 'should have the correct token url' do
+    it "should have the correct token url" do
       instance = subject.new(app, {})
-      instance.client.options[:token_url].should eq('/oauth/token')
+      expect(instance.client.options[:token_url]).to eq "/oauth/token"
     end
   end
 
-  describe '#authorize_params' do
+  describe "#authorize_params" do
     subject { fresh_strategy }
 
-    it 'should include the appropriate authorize params passed in the :authorize_params option' do
-      instance = subject.new('abc', 'def', :authorize_params => {:scope => 'ViewReports,ImportSubscribers', :something => 'else', :state => '4321'})
-      instance.authorize_params[:scope].should eq('ViewReports,ImportSubscribers')
+    it "should include the appropriate authorize params passed in the :authorize_params option" do
+      instance = subject.new("abc", "def", :authorize_params => {:scope => "ViewReports,ImportSubscribers", :something => "else", :state => "4321"})
+      expect(instance.authorize_params[:scope]).to eq "ViewReports,ImportSubscribers"
     end
 
-    it 'should include appropriate top-level options that are marked as :authorize_options' do
-      instance = subject.new('abc', 'def', :authorize_options => [:scope], :scope => 'ViewReports,ImportSubscribers', :something => 'else', :authorize_params => {:state => '4321'})
-      instance.authorize_params[:scope].should eq('ViewReports,ImportSubscribers')
+    it "should include appropriate top-level options that are marked as :authorize_options" do
+      instance = subject.new("abc", "def", :authorize_options => [:scope], :scope => "ViewReports,ImportSubscribers", :something => "else", :authorize_params => {:state => "4321"})
+      expect(instance.authorize_params[:scope]).to eq "ViewReports,ImportSubscribers"
     end
   end
 
-  describe '#callback_path' do
+  describe "#callback_path" do
     subject{ fresh_strategy }
 
-    it 'should have the correct callback path' do
+    it "should have the correct callback path" do
       instance = subject.new(app, {})
-      instance.callback_path.should eq('/auth/createsend/callback')
+      expect(instance.callback_path).to eq "/auth/createsend/callback"
     end
   end
 end
