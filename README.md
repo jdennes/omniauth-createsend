@@ -1,12 +1,6 @@
 # OmniAuth CreateSend
-[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Coverage Status](https://coveralls.io/repos/jdennes/omniauth-createsend/badge.png?branch=master)][coveralls] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
 
-This is the official [OmniAuth](http://www.omniauth.org/) strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
-
-[travis]: http://travis-ci.org/jdennes/omniauth-createsend
-[coveralls]: https://coveralls.io/r/jdennes/omniauth-createsend
-[gemnasium]: https://gemnasium.com/jdennes/omniauth-createsend
-[gembadge]: http://badge.fury.io/rb/omniauth-createsend
+This is the [OmniAuth](http://www.omniauth.org/) strategy for authenticating with the [Campaign Monitor API](http://www.campaignmonitor.com/api/). You'll need to register an OAuth Application in your Campaign Monitor account to get a Client ID and Client Secret to use with this OmniAuth strategy.
 
 ## Installing
 
@@ -41,3 +35,12 @@ Once you've authenticated, you should use the [createsend](http://campaignmonito
 ## Contributing
 
 Please check the [guidelines for contributing](https://github.com/jdennes/omniauth-createsend/blob/master/CONTRIBUTING.md) to this repository.
+
+## This stuff should be green
+
+[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Coverage Status](https://coveralls.io/repos/jdennes/omniauth-createsend/badge.png?branch=master)][coveralls] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
+
+[travis]: http://travis-ci.org/jdennes/omniauth-createsend
+[coveralls]: https://coveralls.io/r/jdennes/omniauth-createsend
+[gemnasium]: https://gemnasium.com/jdennes/omniauth-createsend
+[gembadge]: http://badge.fury.io/rb/omniauth-createsend
