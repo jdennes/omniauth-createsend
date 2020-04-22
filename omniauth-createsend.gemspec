@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "omniauth-oauth2", "~> 1.6"
   s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "rack-test", "~> 1.1"
-  s.add_development_dependency "webmock", "~> 1.0"
+  s.add_development_dependency "webmock", "~> 3.8"
   s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "simplecov", "~> 0"
   s.add_development_dependency "coveralls", "~> 0"
