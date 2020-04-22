@@ -2,7 +2,7 @@
 
 1. [Fork the repository](https://help.github.com/articles/fork-a-repo).
 2. Create a topic branch.
-3. Make your changes, including tests for your changes which maintain [coverage](https://coveralls.io/r/jdennes/omniauth-createsend).
-4. Ensure that all tests pass, by running `bundle exec rake`. The [Travis CI build](https://travis-ci.org/jdennes/omniauth-createsend) runs on Ruby `2.1.0`, `2.0.0`, and `1.9.3`.
-5. It should go without saying, but do not increment the version number in your commits.
+3. Make your changes, including tests for your changes which maintain coverage.
+4. Ensure that all tests pass, by running `bundle exec rake`.
+5. Please don't increment the version number in your commits.
 6. [Submit a pull request](https://help.github.com/articles/using-pull-requests).

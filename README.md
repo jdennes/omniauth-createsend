@@ -38,9 +38,8 @@ Please check the [guidelines for contributing](https://github.com/jdennes/omniau
 
 ## This stuff should be green
 
-[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Coverage Status](https://coveralls.io/repos/jdennes/omniauth-createsend/badge.png?branch=master)][coveralls] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
+[![Build Status](https://secure.travis-ci.org/jdennes/omniauth-createsend.png)][travis] [![Dependency Status](https://gemnasium.com/jdennes/omniauth-createsend.png)][gemnasium] [![Gem Version](https://badge.fury.io/rb/omniauth-createsend.png)][gembadge]
 
 [travis]: http://travis-ci.org/jdennes/omniauth-createsend
-[coveralls]: https://coveralls.io/r/jdennes/omniauth-createsend
 [gemnasium]: https://gemnasium.com/jdennes/omniauth-createsend
 [gembadge]: http://badge.fury.io/rb/omniauth-createsend
